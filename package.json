@@ -1,0 +1,17 @@
+{
+  "name": "shoplist-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/almeidarenato/shoplist-backend",
+  "author": "almeidarenato <renatoam@ymail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts":{
+    "dev":"nodemon index.js"
+  }
+}
