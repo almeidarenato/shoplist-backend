@@ -1,7 +1,7 @@
 module.exports = {
-  port: "8083",
+  port: "8084",
   database: {
-    url: "",
-    password: ""
+    login: "shoplist",
+    password: "shoplist"
   }
 };
