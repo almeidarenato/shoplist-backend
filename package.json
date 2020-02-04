@@ -6,12 +6,13 @@
   "author": "almeidarenato <renatoam@ymail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "router": "^1.3.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
   },
-  "scripts":{
-    "dev":"nodemon index.js"
+  "scripts": {
+    "dev": "nodemon src/index.js"
   }
 }
