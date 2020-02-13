@@ -8,5 +8,6 @@ routes.get("/teste", (req, res) => {
 
 routes.get("/produto", ProdutoController.index);
 routes.post("/produto", ProdutoController.store);
-
+routes.put("/produto/:id", ProdutoController.update);
+routes.delete("/produto/:id", ProdutoController.delete);
 module.exports = routes;
