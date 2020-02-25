@@ -14,7 +14,10 @@ mongoose.connect(uri, {
 app.use(cors());
 app.use(express.json());
 app.use(routes);
+app.get("/", (req, res) => {
+  res.json({ welcome: "API ShopList" });
+});
 app.listen(process.env.PORT || port, err => {
   if (err) console.log(err);
-  else console.log(`Servidor rodando na porta ${port}`);
+  else console.log(`Servidor rodando na porta ${process.env.PORT || port}`);
 });

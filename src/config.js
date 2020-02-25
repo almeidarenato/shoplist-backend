@@ -1,5 +1,5 @@
 module.exports = {
-  port: "8084",
+  port: "3000",
   database: {
     login: "shoplist",
     password: "shoplist"

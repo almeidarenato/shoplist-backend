@@ -1,5 +1,4 @@
 const Produto = require("../models/Produto");
-
 module.exports = {
   ///
   //  INDEX
@@ -33,14 +32,16 @@ module.exports = {
 
     try {
       let produto = await Produto.findOne({ _id: id });
+      if (produto) {
+        produto.comprado = comprado;
+        produto.nome = nome;
+        produto.preco = preco;
+        produto.quantidade = quantidade;
 
-      produto.comprado = comprado;
-      produto.nome = nome;
-      produto.preco = preco;
-      produto.quantidade = quantidade;
-
-      let sucesso = produto.save();
-      return res.json(req.body);
+        let sucesso = produto.save();
+        return res.json(req.body);
+      } else {
+      }
     } catch (error) {
       console.log(error);
       return res.json({ Erro: `${error}` });
@@ -64,7 +65,7 @@ module.exports = {
       }
     } catch (error) {
       console.log(error);
-      return res.json({ Erro: `${error}` });
+      return res.status(500).send(`${error}`);
     }
   }
 };
